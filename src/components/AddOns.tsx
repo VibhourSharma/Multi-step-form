@@ -26,62 +26,71 @@ const AddOns: React.FC = () => {
       <p className="text-[16px] text-gray-400">
         Add-ons help to enhance your gaming experience.
       </p>
-      <form action="" className="flex flex-col mt-10">
+      <form action="" className="flex flex-col mt-8">
         <label
           htmlFor="online service"
-          className={`font-medium p-7 border hover:border-[#6A5BFF] transition-all flex justify-between ${
+          className={`font-medium p-7 border hover:border-[#6A5BFF] transition-all flex justify-between items-center rounded-lg ${
             checkboxes.onlineService ? "bg-[#F0F6FF] border-[#6A5BFF]" : ""
           }`}
           onClick={() => handleCheckboxToggle("onlineService")}
         >
-          <div>
+          <div className="flex">
             <input
               type="checkbox"
               className="mr-4"
               checked={checkboxes.onlineService}
               onChange={() => {}}
             />
-            Online service
+            <div>
+              <p className="font-bold text-[18px]">Online Service</p>
+              <p className="text-gray-400">Custom theme on your profile</p>
+            </div>
           </div>
           <span>$10/yr</span>
         </label>
 
         <label
           htmlFor="larger storage"
-          className={`font-medium mt-4 p-7 border hover:border-[#6A5BFF] transition-all flex justify-between ${
+          className={`font-medium mt-4 p-7 border hover:border-[#6A5BFF] transition-all flex justify-between items-center rounded-lg ${
             checkboxes.largerStorage ? "bg-[#F0F6FF] border-[#6A5BFF]" : ""
           }`}
           onClick={() => handleCheckboxToggle("largerStorage")}
         >
-          <div>
+          <div className="flex">
             <input
               type="checkbox"
               className="mr-4"
               checked={checkboxes.largerStorage}
               onChange={() => {}}
             />
-            Larger storage
+            <div>
+              <p className="font-bold text-[18px]">Larger Storage</p>
+              <p className="text-gray-400">Custom theme on your profile</p>
+            </div>
           </div>
           <span>$20/yr</span>
         </label>
 
         <label
           htmlFor="customizable profile"
-          className={`font-medium mt-4 p-7 border hover:border-[#6A5BFF] transition-all flex justify-between ${
+          className={`font-medium mt-4 p-7 border hover:border-[#6A5BFF] transition-all flex justify-between items-center rounded-lg ${
             checkboxes.customizableProfile
               ? "bg-[#F0F6FF] border-[#6A5BFF]"
               : ""
           }`}
           onClick={() => handleCheckboxToggle("customizableProfile")}
         >
-          <div>
+          <div className="flex">
             <input
               type="checkbox"
               className="mr-4"
               checked={checkboxes.customizableProfile}
               onChange={() => {}}
             />
-            Customizable profile
+            <div>
+              <p className="font-bold text-[18px]">Customizable profile</p>
+              <p className="text-gray-400">Custom theme on your profile</p>
+            </div>
           </div>
           <span>$20/yr</span>
         </label>

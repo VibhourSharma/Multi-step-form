@@ -13,7 +13,7 @@ const PersonalInfo = () => {
           type="text"
           id="Name"
           placeholder="e.g. Stephen King"
-          className="p-1.5 rounded-lg my-2 border outline-none focus:border-[#6A5BFF] transition-all"
+          className="p-2 rounded-lg my-2 border outline-none focus:border-[#6A5BFF] transition-all"
         />
         <label htmlFor="Email" className="font-medium mt-4">
           Email Address
@@ -22,7 +22,7 @@ const PersonalInfo = () => {
           type="email"
           id="Email"
           placeholder="e.g. StephenKing@lorem.com"
-          className="p-1.5 rounded-lg my-2 border outline-none focus:border-[#6A5BFF] transition-all"
+          className="p-2 rounded-lg my-2 border outline-none focus:border-[#6A5BFF] transition-all"
         />
         <label htmlFor="phoneNumber" className="font-medium mt-4">
           Phone Number
@@ -31,7 +31,7 @@ const PersonalInfo = () => {
           type="number"
           id="phoneNumber"
           placeholder="e.g. +1 2345 6789"
-          className="p-1.5 rounded-lg my-2 border outline-none focus:border-[#6A5BFF] transition-all"
+          className="p-2 rounded-lg my-2 border outline-none focus:border-[#6A5BFF] transition-all"
         />
       </form>
     </div>
