@@ -8,8 +8,7 @@ interface StepsConfigType {
 const Stepper: React.FC<{
   stepsConfig: StepsConfigType[];
   currentStep: number;
-  isComplete: boolean;
-}> = ({ stepsConfig, isComplete, currentStep }) => {
+}> = ({ stepsConfig, currentStep }) => {
   return (
     <div className="p-2">
       <img src={bgsidebar} alt="Background Sidebar" className=" object-cover" />
@@ -18,14 +17,15 @@ const Stepper: React.FC<{
           return (
             <div className="flex gap-4" key={step.name}>
               <span
-                className={`text-white w-10 h-10 rounded-full flex items-center justify-center border border-white cursor-pointer ${
+                className={`w-10 h-10 rounded-full flex items-center justify-center border border-white cursor-pointer ${
                   currentStep === index + 1
-                    ? "bg-[#BFE2FD] text-black border-none"
-                    : ""
-                } transition-all`}
+                    ? "bg-[#F0F6FF] border-none transition-all"
+                    : "text-white"
+                }`}
               >
                 {index + 1}
               </span>
+
               <div className="flex flex-col text-white">
                 <span>Step {index + 1}</span>
                 <span className="uppercase font-bold"> {step.name}</span>
