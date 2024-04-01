@@ -10,7 +10,6 @@ interface PlansContextType {
   personalData: PersonalInfo;
   setPersonalData: React.Dispatch<React.SetStateAction<PersonalInfo>>;
   handleInputChange: (e: any) => void;
-  handleSubmit: (e: any) => void;
   plansValue: number;
   setPlansValue: React.Dispatch<React.SetStateAction<number>>;
   addOnValue: number[];
@@ -57,11 +56,6 @@ export const PlansProvider: React.FC<PlansProviderProps> = ({ children }) => {
     });
   };
 
-  const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    console.log("Personal Information:", personalData);
-  };
-
   const handlePlanToggle = (value: number) => {
     setPlansValue(value);
     console.log(`value, ${value}`);
@@ -95,7 +89,6 @@ export const PlansProvider: React.FC<PlansProviderProps> = ({ children }) => {
     <PlansContext.Provider
       value={{
         handleInputChange,
-        handleSubmit,
         personalData,
         setPersonalData,
         plansValue,

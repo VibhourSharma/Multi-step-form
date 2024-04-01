@@ -2,8 +2,8 @@ import React from "react";
 import { usePlans } from "../context/Plans";
 
 const AddOns: React.FC = () => {
-  const { addOnValue, handleAddOnToggle } = usePlans();
-
+  const { addOnValue, handleAddOnToggle, billingFrequency, getAddonPrice } =
+    usePlans();
   return (
     <div className="p-2 text-[#02295A]">
       <h1 className="text-[32px] font-bold">Pick Add-ons</h1>
@@ -31,7 +31,9 @@ const AddOns: React.FC = () => {
               <p className="text-gray-400">Custom theme on your profile</p>
             </div>
           </div>
-          <span className="font-bold text-[#6259FF]">$1/yr</span>
+          <span className="font-bold text-[#6259FF]">
+            ${getAddonPrice(1)}/{billingFrequency === "monthly" ? "mo" : "yr"}
+          </span>
         </label>
 
         <label
@@ -54,7 +56,9 @@ const AddOns: React.FC = () => {
               <p className="text-gray-400">Custom theme on your profile</p>
             </div>
           </div>
-          <span className="font-bold text-[#6259FF]">$2/yr</span>
+          <span className="font-bold text-[#6259FF]">
+            ${getAddonPrice(2)}/{billingFrequency === "monthly" ? "mo" : "yr"}
+          </span>
         </label>
 
         <label
@@ -77,7 +81,9 @@ const AddOns: React.FC = () => {
               <p className="text-gray-400">Custom theme on your profile</p>
             </div>
           </div>
-          <span className="font-bold text-[#6259FF]">$3/yr</span>
+          <span className="font-bold text-[#6259FF]">
+            ${getAddonPrice(3)}/{billingFrequency === "monthly" ? "mo" : "yr"}
+          </span>
         </label>
       </form>
     </div>

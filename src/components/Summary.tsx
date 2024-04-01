@@ -74,12 +74,12 @@ const Summary = () => {
         )}
       </div>
       <div className="flex justify-between p-6">
-        <p className="font-bold text-xl flex gap-2">
+        <span className="font-bold text-xl flex gap-2">
           Total
           <p className="text-gray-400 font-medium">
             ({plans.billingFrequency === "monthly" ? "per month" : "per year"})
           </p>
-        </p>
+        </span>
         <p className="font-bold">
           ${total}/{plans.billingFrequency === "monthly" ? "mo" : "yr"}
         </p>

@@ -1,14 +1,14 @@
 import { usePlans } from "../context/Plans";
 
 const PersonalInfo = () => {
-  const { handleInputChange, personalData, handleSubmit } = usePlans();
+  const { handleInputChange, personalData } = usePlans();
   return (
     <div className="p-2 text-[#02295A]">
       <h1 className="text-[32px] font-bold">Personal Information</h1>
       <p className="text-[16px] text-gray-400">
         Please provide your name, email, address, and phone number.
       </p>
-      <form onSubmit={handleSubmit} className="flex flex-col mt-10">
+      <form className="flex flex-col mt-10">
         <label htmlFor="Name" className="font-medium">
           Name
         </label>
