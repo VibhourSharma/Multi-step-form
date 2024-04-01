@@ -20,6 +20,7 @@ interface PlansContextType {
   billingFrequency: string;
   setBillingFrequency: React.Dispatch<React.SetStateAction<string>>;
   handleYearlyPlansToggle: () => void;
+  getAddonPrice: (price: number) => number;
 }
 
 export const PlansContext = createContext<PlansContextType | undefined>(
@@ -86,6 +87,10 @@ export const PlansProvider: React.FC<PlansProviderProps> = ({ children }) => {
     }
   };
 
+  const getAddonPrice = (price: number) => {
+    return billingFrequency === "yearly" ? price * 10 : price;
+  };
+
   return (
     <PlansContext.Provider
       value={{
@@ -102,6 +107,7 @@ export const PlansProvider: React.FC<PlansProviderProps> = ({ children }) => {
         billingFrequency,
         setBillingFrequency,
         handleYearlyPlansToggle,
+        getAddonPrice,
       }}
     >
       {children}
