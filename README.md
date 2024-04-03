@@ -3,7 +3,7 @@
 # Multi-Step Form
 
 ## Overview
-This project tackles the Multi-Step Form challenge from Frontend Mentor using React and Tailwind CSS. It features a stepper for seamless navigation, toggles for plan selection, checkboxes for addons, and toast notifications for user feedback.
+This project tackles the Multi-Step Form challenge from Frontend Mentor using React, TypeScript, and Tailwind CSS. It features a stepper for seamless navigation, toggles for plan selection, checkboxes for add-ons, and toast notifications for user feedback.
 
 ## Features
 - Multi-step form with stepper
@@ -13,6 +13,7 @@ This project tackles the Multi-Step Form challenge from Frontend Mentor using Re
 
 ## Technologies
 - React
+- TypeScript
 - Tailwind CSS
 - React Sonner
 
